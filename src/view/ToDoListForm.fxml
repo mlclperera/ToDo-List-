@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="512.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ToDoListFormController">
+   <children>
+      <ListView fx:id="lstTodo" layoutX="14.0" layoutY="14.0" prefHeight="486.0" prefWidth="347.0" />
+      <Label fx:id="lblTitle" layoutX="378.0" layoutY="14.0" prefHeight="18.0" prefWidth="254.0" text="Hi User Welcome to To-Do List">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUserID" layoutX="694.0" layoutY="14.0" prefHeight="18.0" prefWidth="46.0" text="U001">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSelectedToDo" layoutX="378.0" layoutY="63.0" prefHeight="26.0" prefWidth="347.0" />
+      <Button fx:id="btnUpdate" layoutX="647.0" layoutY="115.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: green;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="552.0" layoutY="115.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="378.0" layoutY="204.0" mnemonicParsing="false" onAction="#btnAddNewToDoOnAction" prefHeight="26.0" prefWidth="158.0" style="-fx-background-color: Blue;" text="+ Add New ToDo" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Separator layoutX="378.0" layoutY="178.0" prefHeight="0.0" prefWidth="347.0" />
+      <Pane fx:id="rootPane" layoutX="378.0" layoutY="246.0" prefHeight="142.0" prefWidth="347.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="89.0" text="Task Name">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtTaskName" layoutX="14.0" layoutY="38.0" prefHeight="25.0" prefWidth="324.0" />
+            <Button layoutX="180.0" layoutY="85.0" mnemonicParsing="false" onAction="#btnAddtoListOnAction" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: green;" text="Add To List" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Button layoutX="378.0" layoutY="406.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: green;" text="&lt;&lt; Log Out" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="95.0" fitWidth="146.0" layoutX="622.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/pngtree-to-do-list-icon-cartoon-style-png-image_1768114.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
